@@ -1,0 +1,33 @@
+{
+	"name": "react-studiobridge",
+	"description": "toto",
+	"version": "0.1.0",
+	"license": "MIT",
+	"main": "lib",
+	"bugs": "https://github.com/getstudiobridge/react-studiobridge/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/getstudiobridge/react-studiobridge"
+	},
+	"keywords": [
+		"audio",
+		"plugin",
+		"javascript",
+		"vst",
+		"react"
+	],
+	"devDependencies": {
+		"@types/react": "^17.0.36",
+		"@typescript-eslint/eslint-plugin": "^5.4.0",
+		"@typescript-eslint/parser": "^5.4.0",
+		"eslint": "^8.3.0",
+		"eslint-plugin-flowtype": "^8.0.3",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"typescript": "^4.5.2"
+	},
+	"peerDependencies": {
+		"foobartestxyz": "^1.0.0",
+		"react": "^17.0.2"
+	}
+}

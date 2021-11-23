@@ -1,6 +1,6 @@
 {
 	"name": "react-studiobridge",
-	"description": "toto",
+	"description": "Build audio plugins using React",
 	"version": "0.1.0",
 	"license": "MIT",
 	"main": "lib",

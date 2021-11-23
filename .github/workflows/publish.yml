@@ -1,0 +1,32 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '**'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container: node:lts
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Bump version
+        run: "sed -i 's/\\(\"version\": \"\\).*\"/\\1${{ github.ref_name }}\"/g' package.json"
+      - name: Commit release
+        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        id: commit
+        with:
+          commit_message: 'release: ${{ github.ref_name }}'
+          file_pattern: package.json
+          commit_user_name: ${{ secrets.RELEASE_COMMIT_USER_NAME }}
+          commit_user_email: ${{ secrets.RELEASE_COMMIT_USER_EMAIL }}
+      - name: Install dependencies
+        run: yarn
+      - name: Compile
+        run: yarn build
+      - name: Authenticate with NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Publish NPM package
+        run: yarn publish --non-interactive

@@ -16,6 +16,10 @@
 		"vst",
 		"react"
 	],
+	"scripts": {
+		"start": "tsc -w",
+		"build": "tsc"
+	},
 	"devDependencies": {
 		"@types/react": "^17.0.36",
 		"@typescript-eslint/eslint-plugin": "^5.4.0",

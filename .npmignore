@@ -2,4 +2,5 @@ src
 .eslintrc.yml
 .gitignore
 .prettierrc.yml
+.releaserc.json
 tsconfig.json

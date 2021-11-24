@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn
+        run: yarn && npm i foobartestxyz
       - name: Compile
         run: yarn build
       - name: Run Semantic Release

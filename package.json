@@ -4,10 +4,10 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"main": "lib",
-	"bugs": "https://github.com/getstudiobridge/react-studiobridge/issues",
+	"bugs": "https://github.com/getsidechain/react-sidechain/issues",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/getstudiobridge/react-studiobridge"
+		"url": "https://github.com/getsidechain/react-sidechain"
 	},
 	"keywords": [
 		"audio",
